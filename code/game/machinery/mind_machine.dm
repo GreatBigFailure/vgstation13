@@ -94,8 +94,8 @@
 		connectTwo.podNumber = 2
 	if ((connectOne) && (connectTwo))
 		podsConnected = TRUE
-	connectOne.RefreshParts()
-	connectTwo.RefreshParts()
+		connectOne.RefreshParts()
+		connectTwo.RefreshParts()
 
 /obj/machinery/mind_machine/mind_machine_hub/proc/findConnectOne()
 	for(var/obj/machinery/mind_machine/mind_machine_pod/CO in orange(1,src))
@@ -208,6 +208,8 @@
 	ui.set_auto_update(1)
 
 /obj/machinery/mind_machine/mind_machine_hub/Topic(href, href_list)
+	if(..())
+		return
 	if(!connectOne.Adjacent(src) || !connectTwo.Adjacent(src) || !connectOne.anchored || !connectTwo.anchored)
 		return
 	if(podsConnected)
