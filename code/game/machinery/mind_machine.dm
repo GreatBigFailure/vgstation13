@@ -64,6 +64,7 @@
 //////Parts and connection/////////
 
 /obj/machinery/mind_machine/mind_machine_hub/New()
+	..()
 	illegalSwap = boss_mobs + blacklisted_mobs - list(/mob/living/simple_animal/hostile/mechahitler, /mob/living/simple_animal/hostile/alien/queen/large, /mob/living/simple_animal/hostile/retaliate/cockatrice)
 	component_parts = newlist(
 		/obj/item/weapon/circuitboard/mind_machine_hub,
@@ -685,6 +686,7 @@
 	var/obj/machinery/mind_machine/mind_machine_hub/connectedHub
 
 /obj/machinery/mind_machine/mind_machine_pod/New()
+	..()
 	component_parts = newlist(
 		/obj/item/weapon/circuitboard/mind_machine_pod,
 		/obj/item/weapon/stock_parts/scanning_module/adv/phasic,
